@@ -46,7 +46,8 @@ def home():
             message = str(e)
     return render_template("index.html",prediction=prediction, message=message,math=math,reading=reading,writing=writing)
 if __name__=="__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
 
        
        
