@@ -4,8 +4,8 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = pickle.load(open(r"C:\Users\YASHWITHA\OneDrive\Desktop\Student_Performance_Early_Warningsystem\models\Student_risk_model.pkl","rb"))
-model_coulumns = pickle.load(open(r"C:\Users\YASHWITHA\OneDrive\Desktop\Student_Performance_Early_Warningsystem\models\model_coulumns.pkl","rb"))
+model = pickle.load(open(r"models/Student_risk_model.pkl","rb"))
+model_coulumns = pickle.load(open(r"models/model_coulumns.pkl","rb"))
 
 @app.route("/", methods = ["GET", "POST"])
 def home():
