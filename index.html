@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Risk Prediction</title>
+    </head>
+    <body>
+
+        <h2>Student Performance Early Warning System</h2>
+        <form method="POST">
+            Math score:<br>
+            <input type="number" name="math" value="{{math}}"><br><br>
+
+            Reading score:<br>
+            <input type="number" name="reading" value="{{reading}}"><br><br>
+
+            Writing score:<br>
+            <input type="number" name="writing" value="{{writing}}"><br><br>
+
+            <input type="submit" value="Predict Risk">
+        </form>
+        {% if prediction %}
+
+        <h3>Predicted Risk Level: {{prediction}}</h3>
+
+        <p>{{message}}</p>
+
+        {% endif %}
+    </body>
+</html>
